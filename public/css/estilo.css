@@ -1,0 +1,40 @@
+.radio-avatar {
+display: none;
+}
+
+.radio-container-avatar label {
+display: flex;
+align-items: center;
+/* column-gap: 20px; */
+}
+
+.custom-radio-avatar {
+border: 5px solid #46ebe2;
+width: 65px;
+height: 65px;
+display: grid;
+place-content: center;
+border-radius: 50%;
+}
+
+.custom-radio-avatar,
+#avatar {
+transition: 0.5s ease;
+color: #f587ff;
+}
+
+.custom-radio-avatar #avatar {
+content: '';
+width: 55px;
+height: 55px;
+place-content: center;
+border-radius: 50%;
+}
+
+input[type='radio']:checked + .custom-radio-avatar {
+border-color: #000000;
+}
+
+input[type='radio']:checked + .custom-radio-avatar #avatar {
+background: #ffcaf4;
+}
