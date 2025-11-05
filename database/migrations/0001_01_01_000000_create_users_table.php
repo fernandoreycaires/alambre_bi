@@ -20,6 +20,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->string('profile_photo_path', 4096)->nullable();
             $table->enum('status', ['Ativo', 'Bloqueado']);
+            $table->boolean('is_admin')->default(false);
             $table->string('theme_body')->nullable();
             $table->string('theme_navbar')->nullable();
             $table->timestamps();

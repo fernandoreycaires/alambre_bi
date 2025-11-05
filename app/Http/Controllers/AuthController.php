@@ -44,7 +44,14 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
 
-        $credentials = $request->only('email', 'password');
+        // $credentials = $request->only('email', 'password');
+
+        //Corrigido pelo Grok para não gerar LOG com a senha
+        $email     = $request->email;
+        $password  = $request->password;
+        $credentials = ['email' => $email, 'password' => $password];
+        Log::info('Tentativa de login', ['email' => $email]);
+        // fim da correção 
 
         if (!auth()->attempt($credentials)) {
             return response()->json(['error' => 'Credenciais inválidas'], 401);
