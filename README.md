@@ -80,8 +80,8 @@ APP_KEY=base64:dY7hiPSZq5C1rxTk9+vlQKF7Wy6snxREMOUCjuZ0e7o=
 
 > Pelo terminal de a permissão abaixo 
 
-` $ sudo chmod 600 storage/oauth-private.key `
-` $ sudo chmod 600 storage/oauth-public.key  `
+` $ sudo chmod 600 storage/oauth-private.key ` <br>
+` $ sudo chmod 600 storage/oauth-public.key  ` <br>
 
 
 ## Informações extras
